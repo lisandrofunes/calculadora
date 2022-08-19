@@ -20,7 +20,7 @@ borrador.forEach(btn =>{
 
 btnOp.forEach(btn =>{
     btn.addEventListener('click', () => {
-        display.agregarNumero(btn.value);
+        display.agregarOperador(btn.innerHTML);
     });
 });
 
