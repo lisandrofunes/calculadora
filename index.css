@@ -1,13 +1,13 @@
 :root{
     background-color: black;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .calculadora{
@@ -15,12 +15,10 @@
     grid-template-columns: repeat(4, 75px);
     grid-template-rows: 160px repeat(5, 75px);
     padding: 10px;
-    background-color: gray;
+    background-color: #808080;
     border-radius: 20px;
     justify-content: center;
-
 }
-
 
 .display{
     display: flex;
@@ -36,8 +34,6 @@
     font-size: 30px;
 }
 
-
-
 button{
     border-radius: 10px 10px 25px 25px;
     box-shadow: 2px 4px #5c5c5c;
@@ -48,6 +44,8 @@ button{
     border: none;
     font-size: 18px;
     user-select: none;
+    outline: none;
+    /*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
 }
 
 button:active {
@@ -55,7 +53,8 @@ button:active {
 }
 
 button:focus {
-    outline: none;
+    outline-color: transparent; 
+    outline-style: none;
 }
 
 .operador{
@@ -63,7 +62,6 @@ button:focus {
     grid-column-end: 5;
     background-color: #ffa500;
     box-shadow: 2px 4px #8d5c00;;
-
 }
 
 .borrador{
@@ -73,4 +71,22 @@ button:focus {
 
 #resultado{
     text-align: right;
+}
+
+.footer__container{
+    display: flex;
+    padding: 50px 0;
+    flex-direction: column;
+    background-color: #111111;
+    font-size: 18px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer__container__social i{
+    font-size: 35px;
+    margin: 16px 10px 0 10px;
+    color: white;
 }

@@ -6,9 +6,9 @@ class Display{
         this.calculador = new Calculadora();
         this.tipoOperacion = undefined;
         this.metodoOperacion = "";
-        this.display="";
-        this.var1="";
-        this.var2="";
+        this.display = "";
+        this.var1 = "";
+        this.var2 = "";
         this.resultado = "";
 
     }
@@ -73,15 +73,12 @@ class Display{
                             }
                         }
                     }
-
                     this.display = this.display.toString() + operador.toString();
                     this.imprimirValores();
-
                 }
                 else{
                     alert("No puede agreagar otro operador");
                 }
-
             } 
         }
     else{
@@ -91,25 +88,7 @@ class Display{
     }
 
     operar(){
-        /*var i=0;
-        var pos;
-
-        if(this.display.includes(this.tipoOperacion) === true ){
-            pos = this.display.indexOf(this.tipoOperacion);
-        }
-
-        /*for(i; i<pos; i++){
-            this.var1+=this.display.charAt(i);
-        }
-
-        pos+=1;
-        for(pos; pos<this.display.length; pos++){
-            this.var2+=this.display.charAt(pos);
-        }
-        */
-        var num1;
-        var num2;
-        num1 = parseFloat(this.var1); num2 = parseFloat(this.var2);
+        var num1 = parseFloat(this.var1); var num2 = parseFloat(this.var2);
 
         this.resultado = this.calculador[this.metodoOperacion](num1, num2);
         this.imprimirValores();
@@ -120,19 +99,15 @@ class Display{
         if(key === "AC"){
             this.tipoOperacion = undefined;
             this.metodoOperacion = "";
-            this.display="";
-            this.var1="";
-            this.var2="";
-            this.resultado = "";
-                
-            
+            this.display = "";
+            this.var1 = "";
+            this.var2 = "";
+            this.resultado = "";  
         }
         else{
-            
             if((this.display.length - this.var1.length) > 1 ){
                 this.var2 = this.var2.toString().slice(0,-1);
                 this.resultado = "";
-
             }
             else{
                 if((this.display.length - this.var1.length) == 1){
@@ -141,7 +116,6 @@ class Display{
                 }
                 else{
                     this.var1 = this.var1.toString().slice(0,-1);
-
                 }
             }
             this.display = this.display.toString().slice(0,-1);
@@ -151,7 +125,6 @@ class Display{
 
     imprimirValores(){
         this.displayValores.textContent = this.display;
- 
         this.displayResultado.textContent = this.resultado;
     }
 }
