@@ -17,7 +17,7 @@
     --background: #0a0a0a;
     --calculadora: #2e2e2e;
     --calculadora-shadow: #1e1e1e;
-    --display: #387438;
+    --display: #555555;
     --display-numbers: #bbf1bb;
     --buttons: #5c5c5c;
     --buttons-shadow: #1c1c1c;
@@ -74,7 +74,7 @@ button{
     font-size: 18px;
     user-select: none;
     outline: none;
-    /*-webkit-tap-highlight-color: rgba(0,0,0,0);*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 button:active {
@@ -83,11 +83,6 @@ button:active {
 
 .numero{
     color: var(--numero);
-}
-
-button:focus {
-    outline-color: transparent; 
-    outline-style: none;
 }
 
 .operador{
